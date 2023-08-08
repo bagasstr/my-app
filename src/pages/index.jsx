@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Product from "./component/Product";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +17,7 @@ const Home = ({ data }) => {
   return (
     <>
       <div className="">
-        {data.map((item) => (
-          <h1>{item.title}</h1>
-        ))}
+        <Product data={data} />
       </div>
     </>
   );
