@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const getServerSideProps = async () => {
   const res = await fetch(`${process.env.NEXTAUTH_URL}/api/hello`);
   const data = await res.json();
+  // console.log(data);
   return {
     props: {
       data,
