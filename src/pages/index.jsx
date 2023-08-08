@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const getServerSideProps = async () => {
-  const res = await fetch("https://my-app-livid-alpha.vercel.app/api/hello");
+  const res = await fetch("http://localhost:3000/api/hello");
   const data = await res.json();
   return {
     props: {
