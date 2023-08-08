@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.API_URL}/api/hello`);
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/hello`);
   const data = await res.json();
   return {
     props: {
